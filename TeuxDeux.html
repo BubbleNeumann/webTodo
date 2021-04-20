@@ -101,7 +101,7 @@
 		
 	var new_input = document.createElement("input");
 	
-	function addTodo(adress, text)
+	function addTodo(address, text)
 	{		
 		var new_todo = document.createElement("button");
 		
@@ -111,36 +111,36 @@
 		
 		new_todo.innerHTML = text;		
 
-		if (adress === "today") document.getElementById('today-list').appendChild(new_todo);
-		if (adress === "tomorrow") document.getElementById('tomorrow-list').appendChild(new_todo);
-		if (adress === "after-tomorrow") document.getElementById('after-tomorrow-list').appendChild(new_todo);
+		if (address === "today") document.getElementById('today-list').appendChild(new_todo);
+		if (address === "tomorrow") document.getElementById('tomorrow-list').appendChild(new_todo);
+		if (address === "after-tomorrow") document.getElementById('after-tomorrow-list').appendChild(new_todo);
 	}
 
-	function searchEnter(evt, adress)
+	function searchEnter(evt, address)
 	{
 		if( event.key === 'Enter' )
 		{
 			var text = document.getElementById("input_id").value;
-			addTodo(adress, text);
+			addTodo(address, text);
 			new_input.remove();
 		}
 	}
 	
-	function readTodo(adress)
+	function readTodo(address)
 	{		
 		var att_onkeydown = document.createAttribute("onkeydown");
-		if (adress === "today") att_onkeydown.value = "searchEnter(this, 'today');";
-		if (adress === "tomorrow") att_onkeydown.value = "searchEnter(this, 'tomorrow');";
-		if (adress === "after-tomorrow") att_onkeydown.value = "searchEnter(this, 'after-tomorrow');";
+		if (address === "today") att_onkeydown.value = "searchEnter(this, 'today');";
+		if (address === "tomorrow") att_onkeydown.value = "searchEnter(this, 'tomorrow');";
+		if (address === "after-tomorrow") att_onkeydown.value = "searchEnter(this, 'after-tomorrow');";
 		new_input.setAttributeNode(att_onkeydown);
 		
 		new_input.setAttribute("id", "input_id");		
 		new_input.setAttribute("onfocus", "this.value=''");
 	
 		
-		if (adress === "today") document.getElementById('today-list').appendChild(new_input);	
-		if (adress === "tomorrow") document.getElementById('tomorrow-list').appendChild(new_input);	
-		if (adress === "after-tomorrow") document.getElementById('after-tomorrow-list').appendChild(new_input);
+		if (address === "today") document.getElementById('today-list').appendChild(new_input);	
+		if (address === "tomorrow") document.getElementById('tomorrow-list').appendChild(new_input);	
+		if (address === "after-tomorrow") document.getElementById('after-tomorrow-list').appendChild(new_input);
 		
 		new_input.focus();
 	}
