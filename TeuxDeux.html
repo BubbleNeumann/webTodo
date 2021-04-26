@@ -16,7 +16,7 @@
 	<style>
 
         .central {
-            width: 900px;
+            width: 1000px;
             margin: auto;
         }
 
@@ -63,7 +63,7 @@
 <div class="central" style="background-color: #f2f2f2; padding: 15px; margin-bottom: 30px; margin-top: 20px;">
 	<div class="row">
 
-		<div class="col-sm-4">
+		<div class="col-sm-3">
 			<p id="today_week_day" align="center" class="week-day-header"/>
 			<p id="today" align="center" style="font-family: 'Helvetica Neue'; font-size: 1em;"/>
 
@@ -75,7 +75,7 @@
 
 		</div>
 
-		<div class="col-sm-4">
+		<div class="col-sm-3">
 			<p id="tomorrow_week_day" align="center" class="week-day-header"/>
 			<p id="tomorrow" align="center" style="font-family: 'Helvetica Neue'; font-size: 1em;"/>
 
@@ -86,7 +86,7 @@
 			<div class="list-group" id="tomorrow-list"></div>
 		</div>
 
-		<div class="col-sm-4">
+		<div class="col-sm-3">
 			<p id="day_after_tomorrow_week_day" align="center" class="week-day-header"/>
 			<p id="day_after_tomorrow" align="center" style="font-family: 'Helvetica Neue'; font-size: 1em;"/>
 
@@ -95,6 +95,18 @@
 			</div>
 
 			<div class="list-group" id="after-tomorrow-list"></div>
+		</div>
+		
+		<div class="col-sm-3">
+			<p align="center" class="week-day-header">LATER</p>
+			<p align="center" style="font-family: 'Helvetica Neue'; font-size: 1em;">no date</p>
+
+			<div class="d-grid gap-2">
+				<button type="button" class="btn btn-outline-success" onclick="readTodo('today-list');">Add task</button>
+			</div>
+
+			<div class="list-group" ></div>
+
 		</div>
 
 	</div>
