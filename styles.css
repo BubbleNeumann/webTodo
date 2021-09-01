@@ -1,0 +1,50 @@
+p {
+    font-family: 'Helvetica Neue';
+    font-size: 1em;
+}
+
+.central {
+    width: 1000px;
+    margin: auto;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.btn {
+    margin-bottom: 10px;
+}
+
+.week-day-header {
+    font-family: 'Antonio';
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 900px) {
+    .col-sm-4 {
+        width: 100%;
+        /* The width is 100%, when the viewport is 800px or smaller */
+    }
+
+    .central {
+        width: 100%;
+        margin: auto;
+    }
+
+    .list-group {
+        margin-bottom: 30px;
+    }
+}
+
+.sort_of_done {
+    text-decoration: line-through
+}
+
+#hidden_holder {
+    display: none
+}
